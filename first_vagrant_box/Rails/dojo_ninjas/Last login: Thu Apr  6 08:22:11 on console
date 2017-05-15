@@ -1,0 +1,1165 @@
+Last login: Thu Apr  6 08:22:11 on console
+Jamess-MacBook-Air:~ jamesmckie$ cd Desktop
+Jamess-MacBook-Air:Desktop jamesmckie$ ls
+mean		ruby		webfunpython
+Jamess-MacBook-Air:Desktop jamesmckie$ cd ruby
+Jamess-MacBook-Air:ruby jamesmckie$ ls
+first_vagrant_box
+Jamess-MacBook-Air:ruby jamesmckie$ cd first_vagrant_box
+Jamess-MacBook-Air:first_vagrant_box jamesmckie$ ls
+Rails			guess_number.rb		my_enumerable.rb
+Vagrantfile		human.rb		ninja.rb
+arrays.rb		is_this_file_synced	project.rb
+bank_account.rb		iterators.rb		range.rb
+basic_13.rb		lion.rb			ruby_puzzles.rb
+bootstrap.sh		mammal.rb		samurai.rb
+dog.rb			mathdojo.rb		wizard.rb
+Jamess-MacBook-Air:first_vagrant_box jamesmckie$ cd Rails
+Jamess-MacBook-Air:Rails jamesmckie$ ls
+my_first_rails		my_first_rails.zip
+Jamess-MacBook-Air:Rails jamesmckie$ cd ..
+Jamess-MacBook-Air:first_vagrant_box jamesmckie$ vagrant up
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Checking if box 'ubuntu/trusty64' is up to date...
+==> default: A newer version of the box 'ubuntu/trusty64' is available! You currently
+==> default: have version '20170330.0.1'. The latest is version '20170404.0.0'. Run
+==> default: `vagrant box update` to update.
+==> default: Clearing any previously set forwarded ports...
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+==> default: Forwarding ports...
+    default: 3000 (guest) => 3000 (host) (adapter 1)
+    default: 22 (guest) => 2222 (host) (adapter 1)
+==> default: Running 'pre-boot' VM customizations...
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2222
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+==> default: Machine booted and ready!
+==> default: Checking for guest additions in VM...
+    default: The guest additions on this VM do not match the installed version of
+    default: VirtualBox! In most cases this is fine, but in rare cases it can
+    default: prevent things such as shared folders from working properly. If you see
+    default: shared folder errors, please make sure the guest additions within the
+    default: virtual machine match the version of VirtualBox you have installed on
+    default: your host and reload your VM.
+    default: 
+    default: Guest Additions Version: 4.3.36
+    default: VirtualBox Version: 5.1
+==> default: Mounting shared folders...
+    default: /vagrant => /Users/jamesmckie/Desktop/ruby/first_vagrant_box
+==> default: Machine already provisioned. Run `vagrant provision` or use the `--provision`
+==> default: flag to force provisioning. Provisioners marked to run always will still run.
+Jamess-MacBook-Air:first_vagrant_box jamesmckie$ vagrant ssh
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-115-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Thu Apr  6 18:38:46 UTC 2017
+
+  System load:  0.23              Processes:           95
+  Usage of /:   4.7% of 39.34GB   Users logged in:     0
+  Memory usage: 6%                IP address for eth0: 10.0.2.15
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+New release '16.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Wed Apr  5 23:59:11 2017 from 10.0.2.2
+vagrant@vagrant-ubuntu-trusty-64:~$ cd /vagrant
+vagrant@vagrant-ubuntu-trusty-64:/vagrant$ ls
+arrays.rb        human.rb             my_enumerable.rb  samurai.rb
+bank_account.rb  is_this_file_synced  ninja.rb          Vagrantfile
+basic_13.rb      iterators.rb         project.rb        wizard.rb
+bootstrap.sh     lion.rb              Rails
+dog.rb           mammal.rb            range.rb
+guess_number.rb  mathdojo.rb          ruby_puzzles.rb
+vagrant@vagrant-ubuntu-trusty-64:/vagrant$ cd Rails
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/Rails$ ls
+my_first_rails  my_first_rails.zip
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/Rails$ rails new dojo_ninjas
+Expected string default value for '--rc'; got false (boolean)
+      create  
+      create  README.rdoc
+      create  Rakefile
+      create  config.ru
+      create  .gitignore
+      create  Gemfile
+      create  app
+      create  app/assets/javascripts/application.js
+      create  app/assets/stylesheets/application.css
+      create  app/controllers/application_controller.rb
+      create  app/helpers/application_helper.rb
+      create  app/views/layouts/application.html.erb
+      create  app/assets/images/.keep
+      create  app/mailers/.keep
+      create  app/models/.keep
+      create  app/controllers/concerns/.keep
+      create  app/models/concerns/.keep
+      create  bin
+      create  bin/bundle
+      create  bin/rails
+      create  bin/rake
+      create  bin/setup
+      create  config
+      create  config/routes.rb
+      create  config/application.rb
+      create  config/environment.rb
+      create  config/secrets.yml
+      create  config/environments
+      create  config/environments/development.rb
+      create  config/environments/production.rb
+      create  config/environments/test.rb
+      create  config/initializers
+      create  config/initializers/assets.rb
+      create  config/initializers/backtrace_silencers.rb
+      create  config/initializers/cookies_serializer.rb
+      create  config/initializers/filter_parameter_logging.rb
+      create  config/initializers/inflections.rb
+      create  config/initializers/mime_types.rb
+      create  config/initializers/session_store.rb
+      create  config/initializers/wrap_parameters.rb
+      create  config/locales
+      create  config/locales/en.yml
+      create  config/boot.rb
+      create  config/database.yml
+      create  db
+      create  db/seeds.rb
+      create  lib
+      create  lib/tasks
+      create  lib/tasks/.keep
+      create  lib/assets
+      create  lib/assets/.keep
+      create  log
+      create  log/.keep
+      create  public
+      create  public/404.html
+      create  public/422.html
+      create  public/500.html
+      create  public/favicon.ico
+      create  public/robots.txt
+      create  test/fixtures
+      create  test/fixtures/.keep
+      create  test/controllers
+      create  test/controllers/.keep
+      create  test/mailers
+      create  test/mailers/.keep
+      create  test/models
+      create  test/models/.keep
+      create  test/helpers
+      create  test/helpers/.keep
+      create  test/integration
+      create  test/integration/.keep
+      create  test/test_helper.rb
+      create  tmp/cache
+      create  tmp/cache/assets
+      create  vendor/assets/javascripts
+      create  vendor/assets/javascripts/.keep
+      create  vendor/assets/stylesheets
+      create  vendor/assets/stylesheets/.keep
+         run  bundle install
+Fetching gem metadata from https://rubygems.org/..........
+Fetching version metadata from https://rubygems.org/..
+Fetching dependency metadata from https://rubygems.org/.
+Resolving dependencies...
+Using rake 12.0.0
+Using i18n 0.8.1
+Using json 1.8.6
+Using minitest 5.10.1
+Using thread_safe 0.3.6
+Using builder 3.2.3
+Using erubis 2.7.0
+Using mini_portile2 2.1.0
+Using rack 1.6.5
+Using mime-types-data 3.2016.0521
+Using arel 6.0.4
+Using debug_inspector 0.0.2
+Using bundler 1.14.6
+Using byebug 9.0.6
+Using coffee-script-source 1.12.2
+Using execjs 2.7.0
+Using thor 0.19.4
+Using concurrent-ruby 1.0.5
+Using multi_json 1.12.1
+Using rdoc 4.3.0
+Using sass 3.4.23
+Using tilt 2.0.7
+Using sqlite3 1.3.13
+Using turbolinks-source 5.0.0
+Using tzinfo 1.2.3
+Using nokogiri 1.7.1
+Using rack-test 0.6.3
+Using mime-types 3.1
+Using binding_of_caller 0.7.2
+Using coffee-script 2.4.1
+Using uglifier 3.1.13
+Using sprockets 3.7.1
+Using sdoc 0.4.2
+Using turbolinks 5.0.1
+Using activesupport 4.2.7
+Using loofah 2.0.3
+Using mail 2.6.4
+Using rails-deprecated_sanitizer 1.0.3
+Using globalid 0.3.7
+Using activemodel 4.2.7
+Using jbuilder 2.6.3
+Using spring 2.0.1
+Using rails-html-sanitizer 1.0.3
+Using rails-dom-testing 1.0.8
+Using activejob 4.2.7
+Using activerecord 4.2.7
+Using actionview 4.2.7
+Using actionpack 4.2.7
+Using actionmailer 4.2.7
+Using railties 4.2.7
+Using sprockets-rails 3.2.0
+Using coffee-rails 4.1.1
+Using jquery-rails 4.3.1
+Using rails 4.2.7
+Using sass-rails 5.0.6
+Using web-console 2.3.0
+Bundle complete! 12 Gemfile dependencies, 56 gems now installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+         run  bundle exec spring binstub --all
+* bin/rake: spring inserted
+* bin/rails: spring inserted
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/Rails$ cd dojo_ninjas
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/Rails/dojo_ninjas$ rails g model Dojo name: string city: string state: string
+Running via Spring preloader in process 2507
+      invoke  active_record
+      create    db/migrate/20170406185543_create_dojos.rb
+      create    app/models/dojo.rb
+      invoke    test_unit
+      create      test/models/dojo_test.rb
+      create      test/fixtures/dojos.yml
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/Rails/dojo_ninjas$ rails g model Ninjadojo: references first_name: string last_name: string
+Running via Spring preloader in process 2523
+      invoke  active_record
+/home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/generators/base.rb:258:in `const_defined?': wrong constant name Ninjadojo: (NameError)
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/generators/base.rb:258:in `block in class_collisions'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/generators/base.rb:249:in `each'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/generators/base.rb:249:in `class_collisions'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/generators/named_base.rb:204:in `block in check_class_collision'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/command.rb:27:in `run'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/invocation.rb:126:in `invoke_command'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/invocation.rb:133:in `block in invoke_all'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/invocation.rb:133:in `each'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/invocation.rb:133:in `map'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/invocation.rb:133:in `invoke_all'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/group.rb:232:in `dispatch'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/invocation.rb:115:in `invoke'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/group.rb:277:in `block in _invoke_for_class_method'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/shell.rb:68:in `with_padding'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/group.rb:266:in `_invoke_for_class_method'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/group.rb:133:in `_invoke_from_option_orm'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/command.rb:27:in `run'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/invocation.rb:126:in `invoke_command'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/invocation.rb:133:in `block in invoke_all'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/invocation.rb:133:in `each'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/invocation.rb:133:in `map'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/invocation.rb:133:in `invoke_all'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/group.rb:232:in `dispatch'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/base.rb:444:in `start'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/generators.rb:157:in `invoke'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/generate.rb:13:in `<top (required)>'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `block in require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/commands_tasks.rb:123:in `require_command!'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/commands_tasks.rb:130:in `generate_or_destroy'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/commands_tasks.rb:50:in `generate'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `block in require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+	from /vagrant/Rails/dojo_ninjas/bin/rails:9:in `<top (required)>'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `block in load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+	from /home/vagrant/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /home/vagrant/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from -e:1:in `<main>'
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/Rails/dojo_ninjas$ rails g model Ninjadojo:references first_name:string last_name:string
+Running via Spring preloader in process 2541
+[WARNING] The model name 'Ninjadojo:references' was recognized as a plural, using the singular 'Ninjadojo:reference' instead. Override with --force-plural or setup custom inflection rules for this noun before running the generator.
+      invoke  active_record
+/home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/generators/base.rb:258:in `const_defined?': wrong constant name Ninjadojo:reference (NameError)
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/generators/base.rb:258:in `block in class_collisions'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/generators/base.rb:249:in `each'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/generators/base.rb:249:in `class_collisions'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/generators/named_base.rb:204:in `block in check_class_collision'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/command.rb:27:in `run'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/invocation.rb:126:in `invoke_command'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/invocation.rb:133:in `block in invoke_all'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/invocation.rb:133:in `each'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/invocation.rb:133:in `map'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/invocation.rb:133:in `invoke_all'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/group.rb:232:in `dispatch'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/invocation.rb:115:in `invoke'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/group.rb:277:in `block in _invoke_for_class_method'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/shell.rb:68:in `with_padding'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/group.rb:266:in `_invoke_for_class_method'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/group.rb:133:in `_invoke_from_option_orm'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/command.rb:27:in `run'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/invocation.rb:126:in `invoke_command'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/invocation.rb:133:in `block in invoke_all'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/invocation.rb:133:in `each'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/invocation.rb:133:in `map'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/invocation.rb:133:in `invoke_all'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/group.rb:232:in `dispatch'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/thor-0.19.4/lib/thor/base.rb:444:in `start'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/generators.rb:157:in `invoke'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/generate.rb:13:in `<top (required)>'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `block in require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/commands_tasks.rb:123:in `require_command!'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/commands_tasks.rb:130:in `generate_or_destroy'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/commands_tasks.rb:50:in `generate'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `block in require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+	from /vagrant/Rails/dojo_ninjas/bin/rails:9:in `<top (required)>'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `block in load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+	from /home/vagrant/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /home/vagrant/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from -e:1:in `<main>'
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/Rails/dojo_ninjas$ rails g model Ninja dojo:references first_name:string last_name:string
+Running via Spring preloader in process 2668
+      invoke  active_record
+      create    db/migrate/20170406191005_create_ninjas.rb
+      create    app/models/ninja.rb
+      invoke    test_unit
+      create      test/models/ninja_test.rb
+      create      test/fixtures/ninjas.yml
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/Rails/dojo_ninjas$ rake db:migrate
+== 20170406185543 CreateDojos: migrating ======================================
+-- create_table(:dojos)
+   -> 0.0063s
+== 20170406185543 CreateDojos: migrated (0.0064s) =============================
+
+== 20170406191005 CreateNinjas: migrating =====================================
+-- create_table(:ninjas)
+   -> 0.0048s
+== 20170406191005 CreateNinjas: migrated (0.0050s) ============================
+
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/Rails/dojo_ninjas$ bundle install
+Using rake 12.0.0
+Using i18n 0.8.1
+Using json 1.8.6
+Using minitest 5.10.1
+Using thread_safe 0.3.6
+Using builder 3.2.3
+Using erubis 2.7.0
+Using mini_portile2 2.1.0
+Using rack 1.6.5
+Using mime-types-data 3.2016.0521
+Using arel 6.0.4
+Using debug_inspector 0.0.2
+Using byebug 9.0.6
+Using coffee-script-source 1.12.2
+Using execjs 2.7.0
+Using thor 0.19.4
+Using concurrent-ruby 1.0.5
+Using hirb 0.7.3
+Using multi_json 1.12.1
+Using bundler 1.14.6
+Using rdoc 4.3.0
+Using sass 3.4.23
+Using tilt 2.0.7
+Using sqlite3 1.3.13
+Using turbolinks-source 5.0.0
+Using tzinfo 1.2.3
+Using nokogiri 1.7.1
+Using rack-test 0.6.3
+Using mime-types 3.1
+Using binding_of_caller 0.7.2
+Using coffee-script 2.4.1
+Using uglifier 3.1.13
+Using sprockets 3.7.1
+Using sdoc 0.4.2
+Using turbolinks 5.0.1
+Using activesupport 4.2.7
+Using loofah 2.0.3
+Using mail 2.6.4
+Using rails-deprecated_sanitizer 1.0.3
+Using globalid 0.3.7
+Using activemodel 4.2.7
+Using jbuilder 2.6.3
+Using spring 2.0.1
+Using rails-html-sanitizer 1.0.3
+Using rails-dom-testing 1.0.8
+Using activejob 4.2.7
+Using activerecord 4.2.7
+Using actionview 4.2.7
+Using actionpack 4.2.7
+Using actionmailer 4.2.7
+Using railties 4.2.7
+Using sprockets-rails 3.2.0
+Using coffee-rails 4.1.1
+Using jquery-rails 4.3.1
+Using rails 4.2.7
+Using sass-rails 5.0.6
+Using web-console 2.3.0
+Bundle complete! 13 Gemfile dependencies, 57 gems now installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/Rails/dojo_ninjas$ rails console
+Running via Spring preloader in process 2693
+Loading development environment (Rails 4.2.7)
+2.3.1 :001 > Dojo.create(name:"CodingDojo Silicon Valley", city:"Mountain View", state:"CA")
+   (0.1ms)  begin transaction
+  SQL (6.4ms)  INSERT INTO "dojos" ("name", "city", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "CodingDojo Silicon Valley"], ["city", "Mountain View"], ["state", "CA"], ["created_at", "2017-04-06 19:14:55.471016"], ["updated_at", "2017-04-06 19:14:55.471016"]]
+   (2.8ms)  commit transaction
+ => #<Dojo id: 1, name: "CodingDojo Silicon Valley", string: nil, city: "Mountain View", state: "CA", created_at: "2017-04-06 19:14:55", updated_at: "2017-04-06 19:14:55"> 
+2.3.1 :002 > Dojo.create(name:"CodingDojo Seattle", city:"Seattle", state:"WA")
+   (0.1ms)  begin transaction
+  SQL (6.0ms)  INSERT INTO "dojos" ("name", "city", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "CodingDojo Seattle"], ["city", "Seattle"], ["state", "WA"], ["created_at", "2017-04-06 19:15:38.532370"], ["updated_at", "2017-04-06 19:15:38.532370"]]
+   (10.7ms)  commit transaction
+ => #<Dojo id: 2, name: "CodingDojo Seattle", string: nil, city: "Seattle", state: "WA", created_at: "2017-04-06 19:15:38", updated_at: "2017-04-06 19:15:38"> 
+2.3.1 :003 > Dojo.create(name:"CodingDojo New York", city:"New York", state:"NY")
+   (0.1ms)  begin transaction
+  SQL (5.4ms)  INSERT INTO "dojos" ("name", "city", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "CodingDojo New York"], ["city", "New York"], ["state", "NY"], ["created_at", "2017-04-06 19:16:18.257126"], ["updated_at", "2017-04-06 19:16:18.257126"]]
+   (11.0ms)  commit transaction
+ => #<Dojo id: 3, name: "CodingDojo New York", string: nil, city: "New York", state: "NY", created_at: "2017-04-06 19:16:18", updated_at: "2017-04-06 19:16:18"> 
+2.3.1 :004 > Hirb.enable
+ => true 
+2.3.1 :005 > Dojo.all
+  Dojo Load (4.7ms)  SELECT "dojos".* FROM "dojos"
++----+---------------------------+--------+---------------+-------+-------------------------+-------------------------+
+| id | name                      | string | city          | state | created_at              | updated_at              |
++----+---------------------------+--------+---------------+-------+-------------------------+-------------------------+
+| 1  | CodingDojo Silicon Valley |        | Mountain View | CA    | 2017-04-06 19:14:55 UTC | 2017-04-06 19:14:55 UTC |
+| 2  | CodingDojo Seattle        |        | Seattle       | WA    | 2017-04-06 19:15:38 UTC | 2017-04-06 19:15:38 UTC |
+| 3  | CodingDojo New York       |        | New York      | NY    | 2017-04-06 19:16:18 UTC | 2017-04-06 19:16:18 UTC |
++----+---------------------------+--------+---------------+-------+-------------------------+-------------------------+
+3 rows in set
+2.3.1 :006 > Ninja.create(dojo:Dojo.find(1), first_name:"Joe", last_name:"Smoe")
+  Dojo Load (2.4ms)  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 1]]
+   (0.1ms)  begin transaction
+  SQL (4.1ms)  INSERT INTO "ninjas" ("dojo_id", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["dojo_id", 1], ["first_name", "Joe"], ["last_name", "Smoe"], ["created_at", "2017-04-06 19:32:35.894077"], ["updated_at", "2017-04-06 19:32:35.894077"]]
+   (2.5ms)  commit transaction
++----+---------+------------+-----------+-------------------------+-------------------------+
+| id | dojo_id | first_name | last_name | created_at              | updated_at              |
++----+---------+------------+-----------+-------------------------+-------------------------+
+| 1  | 1       | Joe        | Smoe      | 2017-04-06 19:32:35 UTC | 2017-04-06 19:32:35 UTC |
++----+---------+------------+-----------+-------------------------+-------------------------+
+1 row in set
+2.3.1 :007 > Ninja.create(dojo:Dojo.find(2), first_name:"Hairy", last_name:"Barry")
+  Dojo Load (1.9ms)  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 2]]
+   (0.2ms)  begin transaction
+  SQL (5.1ms)  INSERT INTO "ninjas" ("dojo_id", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["dojo_id", 2], ["first_name", "Hairy"], ["last_name", "Barry"], ["created_at", "2017-04-06 19:33:11.763769"], ["updated_at", "2017-04-06 19:33:11.763769"]]
+   (11.7ms)  commit transaction
++----+---------+------------+-----------+-------------------------+-------------------------+
+| id | dojo_id | first_name | last_name | created_at              | updated_at              |
++----+---------+------------+-----------+-------------------------+-------------------------+
+| 2  | 2       | Hairy      | Barry     | 2017-04-06 19:33:11 UTC | 2017-04-06 19:33:11 UTC |
++----+---------+------------+-----------+-------------------------+-------------------------+
+1 row in set
+2.3.1 :008 > Ninja.create(dojo:Dojo.find(3), first_name:"Georgie", last_name:"Porgie")
+  Dojo Load (2.0ms)  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 3]]
+   (0.1ms)  begin transaction
+  SQL (5.4ms)  INSERT INTO "ninjas" ("dojo_id", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["dojo_id", 3], ["first_name", "Georgie"], ["last_name", "Porgie"], ["created_at", "2017-04-06 19:33:38.235083"], ["updated_at", "2017-04-06 19:33:38.235083"]]
+   (10.1ms)  commit transaction
++----+---------+------------+-----------+-------------------------+-------------------------+
+| id | dojo_id | first_name | last_name | created_at              | updated_at              |
++----+---------+------------+-----------+-------------------------+-------------------------+
+| 3  | 3       | Georgie    | Porgie    | 2017-04-06 19:33:38 UTC | 2017-04-06 19:33:38 UTC |
++----+---------+------------+-----------+-------------------------+-------------------------+
+1 row in set
+2.3.1 :009 > Ninja.create(dojo:Dojo.find(1), first_name:"Slim", last_name:"Jim")
+  Dojo Load (2.3ms)  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 1]]
+   (0.1ms)  begin transaction
+  SQL (5.2ms)  INSERT INTO "ninjas" ("dojo_id", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["dojo_id", 1], ["first_name", "Slim"], ["last_name", "Jim"], ["created_at", "2017-04-06 19:34:04.438038"], ["updated_at", "2017-04-06 19:34:04.438038"]]
+   (10.7ms)  commit transaction
++----+---------+------------+-----------+-------------------------+-------------------------+
+| id | dojo_id | first_name | last_name | created_at              | updated_at              |
++----+---------+------------+-----------+-------------------------+-------------------------+
+| 4  | 1       | Slim       | Jim       | 2017-04-06 19:34:04 UTC | 2017-04-06 19:34:04 UTC |
++----+---------+------------+-----------+-------------------------+-------------------------+
+1 row in set
+2.3.1 :010 > Ninja.create(dojo:Dojo.find(2), first_name:"Credit", last_name:"Edit")
+  Dojo Load (2.3ms)  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 2]]
+   (0.1ms)  begin transaction
+  SQL (5.4ms)  INSERT INTO "ninjas" ("dojo_id", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["dojo_id", 2], ["first_name", "Credit"], ["last_name", "Edit"], ["created_at", "2017-04-06 19:34:27.418451"], ["updated_at", "2017-04-06 19:34:27.418451"]]
+   (10.3ms)  commit transaction
++----+---------+------------+-----------+-------------------------+-------------------------+
+| id | dojo_id | first_name | last_name | created_at              | updated_at              |
++----+---------+------------+-----------+-------------------------+-------------------------+
+| 5  | 2       | Credit     | Edit      | 2017-04-06 19:34:27 UTC | 2017-04-06 19:34:27 UTC |
++----+---------+------------+-----------+-------------------------+-------------------------+
+1 row in set
+2.3.1 :011 > Ninja.create(dojo:Dojo.find(3), first_name:"Great", last_name:"Nate")
+  Dojo Load (2.7ms)  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 3]]
+   (0.1ms)  begin transaction
+  SQL (5.4ms)  INSERT INTO "ninjas" ("dojo_id", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["dojo_id", 3], ["first_name", "Great"], ["last_name", "Nate"], ["created_at", "2017-04-06 19:34:49.910796"], ["updated_at", "2017-04-06 19:34:49.910796"]]
+   (11.6ms)  commit transaction
++----+---------+------------+-----------+-------------------------+-------------------------+
+| id | dojo_id | first_name | last_name | created_at              | updated_at              |
++----+---------+------------+-----------+-------------------------+-------------------------+
+| 6  | 3       | Great      | Nate      | 2017-04-06 19:34:49 UTC | 2017-04-06 19:34:49 UTC |
++----+---------+------------+-----------+-------------------------+-------------------------+
+1 row in set
+2.3.1 :012 > Dojo.find(1).destroy
+  Dojo Load (3.4ms)  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 1]]
+   (0.1ms)  begin transaction
+  SQL (5.9ms)  DELETE FROM "dojos" WHERE "dojos"."id" = ?  [["id", 1]]
+   (3.8ms)  commit transaction
++----+---------------------------+--------+---------------+-------+-------------------------+-------------------------+
+| id | name                      | string | city          | state | created_at              | updated_at              |
++----+---------------------------+--------+---------------+-------+-------------------------+-------------------------+
+| 1  | CodingDojo Silicon Valley |        | Mountain View | CA    | 2017-04-06 19:14:55 UTC | 2017-04-06 19:14:55 UTC |
++----+---------------------------+--------+---------------+-------+-------------------------+-------------------------+
+1 row in set
+2.3.1 :013 > Dojo.where(id:2..3).destroy_all
+  Dojo Load (1.9ms)  SELECT "dojos".* FROM "dojos" WHERE ("dojos"."id" BETWEEN 2 AND 3)
+   (0.1ms)  begin transaction
+  SQL (4.0ms)  DELETE FROM "dojos" WHERE "dojos"."id" = ?  [["id", 2]]
+   (10.3ms)  commit transaction
+   (0.2ms)  begin transaction
+  SQL (5.4ms)  DELETE FROM "dojos" WHERE "dojos"."id" = ?  [["id", 3]]
+   (3.7ms)  commit transaction
++----+---------------------+--------+----------+-------+-------------------------+-------------------------+
+| id | name                | string | city     | state | created_at              | updated_at              |
++----+---------------------+--------+----------+-------+-------------------------+-------------------------+
+| 2  | CodingDojo Seattle  |        | Seattle  | WA    | 2017-04-06 19:15:38 UTC | 2017-04-06 19:15:38 UTC |
+| 3  | CodingDojo New York |        | New York | NY    | 2017-04-06 19:16:18 UTC | 2017-04-06 19:16:18 UTC |
++----+---------------------+--------+----------+-------+-------------------------+-------------------------+
+2 rows in set
+2.3.1 :014 > dojo = Dojo.new
++----+------+--------+------+-------+------------+------------+
+| id | name | string | city | state | created_at | updated_at |
++----+------+--------+------+-------+------------+------------+
+|    |      |        |      |       |            |            |
++----+------+--------+------+-------+------------+------------+
+1 row in set
+2.3.1 :015 > dojo.destroy
+   (0.1ms)  begin transaction
+   (0.1ms)  commit transaction
++----+------+--------+------+-------+------------+------------+
+| id | name | string | city | state | created_at | updated_at |
++----+------+--------+------+-------+------------+------------+
+|    |      |        |      |       |            |            |
++----+------+--------+------+-------+------------+------------+
+1 row in set
+2.3.1 :016 > dojo = Dojo.new(name:"BurbankDojo", city:"Burbank", state:"CA")
++----+-------------+--------+---------+-------+------------+------------+
+| id | name        | string | city    | state | created_at | updated_at |
++----+-------------+--------+---------+-------+------------+------------+
+|    | BurbankDojo |        | Burbank | CA    |            |            |
++----+-------------+--------+---------+-------+------------+------------+
+1 row in set
+2.3.1 :017 > dojo.save
+   (0.1ms)  begin transaction
+  SQL (5.4ms)  INSERT INTO "dojos" ("name", "city", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "BurbankDojo"], ["city", "Burbank"], ["state", "CA"], ["created_at", "2017-04-06 19:51:41.423423"], ["updated_at", "2017-04-06 19:51:41.423423"]]
+   (10.3ms)  commit transaction
+ => true 
+2.3.1 :018 > dojo = Dojo.new(name:"TexasDojo", city:"Austin", state:"TX")
++----+-----------+--------+--------+-------+------------+------------+
+| id | name      | string | city   | state | created_at | updated_at |
++----+-----------+--------+--------+-------+------------+------------+
+|    | TexasDojo |        | Austin | TX    |            |            |
++----+-----------+--------+--------+-------+------------+------------+
+1 row in set
+2.3.1 :019 > dojo = Dojo.new(name:"NYDojo", city:"New York", state:"NY")
++----+--------+--------+----------+-------+------------+------------+
+| id | name   | string | city     | state | created_at | updated_at |
++----+--------+--------+----------+-------+------------+------------+
+|    | NYDojo |        | New York | NY    |            |            |
++----+--------+--------+----------+-------+------------+------------+
+1 row in set
+2.3.1 :020 > dojo.all.save
+NoMethodError: undefined method `all' for #<Dojo:0x00000004ba4830>
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activemodel-4.2.7/lib/active_model/attribute_methods.rb:433:in `method_missing'
+	from (irb):20
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/console.rb:110:in `start'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/console.rb:9:in `start'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `block in require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+	from /vagrant/Rails/dojo_ninjas/bin/rails:9:in `<top (required)>'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `block in load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/commands/rails.rb:6:in `call'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/command_wrapper.rb:38:in `call'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:191:in `block in serve'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:161:in `fork'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:161:in `serve'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:131:in `block in run'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:125:in `loop'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:125:in `run'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application/boot.rb:19:in `<top (required)>'
+	from /home/vagrant/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /home/vagrant/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from -e:1:in `<main>'
+2.3.1 :021 > dojo.save
+   (0.2ms)  begin transaction
+  SQL (5.4ms)  INSERT INTO "dojos" ("name", "city", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "NYDojo"], ["city", "New York"], ["state", "NY"], ["created_at", "2017-04-06 19:58:16.496295"], ["updated_at", "2017-04-06 19:58:16.496295"]]
+   (11.3ms)  commit transaction
+ => true 
+2.3.1 :022 > dojo = Dojo.new(name:"TexasDojo", city:"Austin", state:"TX")
++----+-----------+--------+--------+-------+------------+------------+
+| id | name      | string | city   | state | created_at | updated_at |
++----+-----------+--------+--------+-------+------------+------------+
+|    | TexasDojo |        | Austin | TX    |            |            |
++----+-----------+--------+--------+-------+------------+------------+
+1 row in set
+2.3.1 :023 > dojo.save
+   (0.1ms)  begin transaction
+  SQL (5.9ms)  INSERT INTO "dojos" ("name", "city", "state", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "TexasDojo"], ["city", "Austin"], ["state", "TX"], ["created_at", "2017-04-06 19:58:44.908898"], ["updated_at", "2017-04-06 19:58:44.908898"]]
+   (11.1ms)  commit transaction
+ => true 
+2.3.1 :024 > Dojo.all
+  Dojo Load (2.6ms)  SELECT "dojos".* FROM "dojos"
++----+-------------+--------+----------+-------+-------------------------+-------------------------+
+| id | name        | string | city     | state | created_at              | updated_at              |
++----+-------------+--------+----------+-------+-------------------------+-------------------------+
+| 4  | BurbankDojo |        | Burbank  | CA    | 2017-04-06 19:51:41 UTC | 2017-04-06 19:51:41 UTC |
+| 5  | NYDojo      |        | New York | NY    | 2017-04-06 19:58:16 UTC | 2017-04-06 19:58:16 UTC |
+| 6  | TexasDojo   |        | Austin   | TX    | 2017-04-06 19:58:44 UTC | 2017-04-06 19:58:44 UTC |
++----+-------------+--------+----------+-------+-------------------------+-------------------------+
+3 rows in set
+2.3.1 :025 > dojo = Dojo.new(name:"Honolulu")
++----+----------+--------+------+-------+------------+------------+
+| id | name     | string | city | state | created_at | updated_at |
++----+----------+--------+------+-------+------------+------------+
+|    | Honolulu |        |      |       |            |            |
++----+----------+--------+------+-------+------------+------------+
+1 row in set
+2.3.1 :026 > Dojo.errors
+NoMethodError: undefined method `errors' for #<Class:0x000000043b0fe8>
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/dynamic_matchers.rb:26:in `method_missing'
+	from (irb):26
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/console.rb:110:in `start'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/console.rb:9:in `start'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `block in require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+	from /vagrant/Rails/dojo_ninjas/bin/rails:9:in `<top (required)>'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `block in load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/commands/rails.rb:6:in `call'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/command_wrapper.rb:38:in `call'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:191:in `block in serve'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:161:in `fork'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:161:in `serve'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:131:in `block in run'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:125:in `loop'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:125:in `run'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application/boot.rb:19:in `<top (required)>'
+	from /home/vagrant/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /home/vagrant/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from -e:1:in `<main>'
+2.3.1 :027 > dojo.save
+   (0.1ms)  begin transaction
+  SQL (6.5ms)  INSERT INTO "dojos" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Honolulu"], ["created_at", "2017-04-06 20:02:19.472570"], ["updated_at", "2017-04-06 20:02:19.472570"]]
+   (11.0ms)  commit transaction
+ => true 
+2.3.1 :028 > dojo.errors
+ => #<ActiveModel::Errors:0x00000004a1f0f0 @base=#<Dojo id: 7, name: "Honolulu", string: nil, city: nil, state: nil, created_at: "2017-04-06 20:02:19", updated_at: "2017-04-06 20:02:19">, @messages={}> 
+2.3.1 :029 > dojo.errors.full_messages
+ => [] 
+2.3.1 :030 > dojo = Dojo.new
++----+------+--------+------+-------+------------+------------+
+| id | name | string | city | state | created_at | updated_at |
++----+------+--------+------+-------+------------+------------+
+|    |      |        |      |       |            |            |
++----+------+--------+------+-------+------------+------------+
+1 row in set
+2.3.1 :031 > dojo.save
+   (0.1ms)  begin transaction
+  SQL (5.3ms)  INSERT INTO "dojos" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2017-04-06 20:04:10.075970"], ["updated_at", "2017-04-06 20:04:10.075970"]]
+   (10.7ms)  commit transaction
+ => true 
+2.3.1 :032 > dojo.errors.full_messages
+ => [] 
+2.3.1 :033 > dojo.valid?
+ => true 
+2.3.1 :034 > reload!
+Reloading...
+ => true 
+2.3.1 :035 > dojo = Dojo.new
++----+------+--------+------+-------+------------+------------+
+| id | name | string | city | state | created_at | updated_at |
++----+------+--------+------+-------+------------+------------+
+|    |      |        |      |       |            |            |
++----+------+--------+------+-------+------------+------------+
+1 row in set
+2.3.1 :036 > dojo.errors.full_messages
+ => [] 
+2.3.1 :037 > dojo.save
+   (0.1ms)  begin transaction
+   (0.1ms)  rollback transaction
+ => false 
+2.3.1 :038 > dojo.errors.full_messages
+ => ["Name can't be blank", "City can't be blank", "State can't be blank", "State is the wrong length (should be 2 characters)"] 
+2.3.1 :039 > Ninja.create(dojo:Dojo.find(1), first_name:"Bob", last_name:"Slob")
+  Dojo Load (2.8ms)  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 1]]
+ActiveRecord::RecordNotFound: Couldn't find Dojo with 'id'=1
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/core.rb:155:in `find'
+	from (irb):39
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/console.rb:110:in `start'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/console.rb:9:in `start'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `block in require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+	from /vagrant/Rails/dojo_ninjas/bin/rails:9:in `<top (required)>'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `block in load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+	from /home/vagrant/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /home/vagrant/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from -e:1:in `<main>'
+2.3.1 :040 > Dojo.all
+  Dojo Load (2.6ms)  SELECT "dojos".* FROM "dojos"
++----+-------------+--------+----------+-------+-------------------------+-------------------------+
+| id | name        | string | city     | state | created_at              | updated_at              |
++----+-------------+--------+----------+-------+-------------------------+-------------------------+
+| 4  | BurbankDojo |        | Burbank  | CA    | 2017-04-06 19:51:41 UTC | 2017-04-06 19:51:41 UTC |
+| 5  | NYDojo      |        | New York | NY    | 2017-04-06 19:58:16 UTC | 2017-04-06 19:58:16 UTC |
+| 6  | TexasDojo   |        | Austin   | TX    | 2017-04-06 19:58:44 UTC | 2017-04-06 19:58:44 UTC |
+| 7  | Honolulu    |        |          |       | 2017-04-06 20:02:19 UTC | 2017-04-06 20:02:19 UTC |
+| 8  |             |        |          |       | 2017-04-06 20:04:10 UTC | 2017-04-06 20:04:10 UTC |
++----+-------------+--------+----------+-------+-------------------------+-------------------------+
+5 rows in set
+2.3.1 :041 > Ninja.all
+  Ninja Load (2.9ms)  SELECT "ninjas".* FROM "ninjas"
++----+---------+------------+-----------+-------------------------+-------------------------+
+| id | dojo_id | first_name | last_name | created_at              | updated_at              |
++----+---------+------------+-----------+-------------------------+-------------------------+
+| 1  | 1       | Joe        | Smoe      | 2017-04-06 19:32:35 UTC | 2017-04-06 19:32:35 UTC |
+| 2  | 2       | Hairy      | Barry     | 2017-04-06 19:33:11 UTC | 2017-04-06 19:33:11 UTC |
+| 3  | 3       | Georgie    | Porgie    | 2017-04-06 19:33:38 UTC | 2017-04-06 19:33:38 UTC |
+| 4  | 1       | Slim       | Jim       | 2017-04-06 19:34:04 UTC | 2017-04-06 19:34:04 UTC |
+| 5  | 2       | Credit     | Edit      | 2017-04-06 19:34:27 UTC | 2017-04-06 19:34:27 UTC |
+| 6  | 3       | Great      | Nate      | 2017-04-06 19:34:49 UTC | 2017-04-06 19:34:49 UTC |
++----+---------+------------+-----------+-------------------------+-------------------------+
+6 rows in set
+2.3.1 :042 > Ninja.create(dojo:Dojo.find(4), first_name:"Bob", last_name:"Slob")
+  Dojo Load (2.5ms)  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 4]]
+   (0.1ms)  begin transaction
+  SQL (6.0ms)  INSERT INTO "ninjas" ("dojo_id", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["dojo_id", 4], ["first_name", "Bob"], ["last_name", "Slob"], ["created_at", "2017-04-06 20:54:33.840108"], ["updated_at", "2017-04-06 20:54:33.840108"]]
+   (10.0ms)  commit transaction
++----+---------+------------+-----------+-------------------------+-------------------------+
+| id | dojo_id | first_name | last_name | created_at              | updated_at              |
++----+---------+------------+-----------+-------------------------+-------------------------+
+| 7  | 4       | Bob        | Slob      | 2017-04-06 20:54:33 UTC | 2017-04-06 20:54:33 UTC |
++----+---------+------------+-----------+-------------------------+-------------------------+
+1 row in set
+2.3.1 :043 > Dojo.find(7).destroy
+  Dojo Load (2.3ms)  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 7]]
+   (0.1ms)  begin transaction
+  SQL (4.9ms)  DELETE FROM "dojos" WHERE "dojos"."id" = ?  [["id", 7]]
+   (10.9ms)  commit transaction
++----+----------+--------+------+-------+-------------------------+-------------------------+
+| id | name     | string | city | state | created_at              | updated_at              |
++----+----------+--------+------+-------+-------------------------+-------------------------+
+| 7  | Honolulu |        |      |       | 2017-04-06 20:02:19 UTC | 2017-04-06 20:02:19 UTC |
++----+----------+--------+------+-------+-------------------------+-------------------------+
+1 row in set
+2.3.1 :044 > Dojo.all
+  Dojo Load (3.2ms)  SELECT "dojos".* FROM "dojos"
++----+-------------+--------+----------+-------+-------------------------+-------------------------+
+| id | name        | string | city     | state | created_at              | updated_at              |
++----+-------------+--------+----------+-------+-------------------------+-------------------------+
+| 4  | BurbankDojo |        | Burbank  | CA    | 2017-04-06 19:51:41 UTC | 2017-04-06 19:51:41 UTC |
+| 5  | NYDojo      |        | New York | NY    | 2017-04-06 19:58:16 UTC | 2017-04-06 19:58:16 UTC |
+| 6  | TexasDojo   |        | Austin   | TX    | 2017-04-06 19:58:44 UTC | 2017-04-06 19:58:44 UTC |
+| 8  |             |        |          |       | 2017-04-06 20:04:10 UTC | 2017-04-06 20:04:10 UTC |
++----+-------------+--------+----------+-------+-------------------------+-------------------------+
+4 rows in set
+2.3.1 :045 > Ninja.create(dojo:Dojo.find(4), first_name:"Bob", last_name:"Slob")
+  Dojo Load (2.9ms)  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 4]]
+   (0.1ms)  begin transaction
+  SQL (5.9ms)  INSERT INTO "ninjas" ("dojo_id", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["dojo_id", 4], ["first_name", "Bob"], ["last_name", "Slob"], ["created_at", "2017-04-06 20:55:54.580045"], ["updated_at", "2017-04-06 20:55:54.580045"]]
+   (10.4ms)  commit transaction
++----+---------+------------+-----------+-------------------------+-------------------------+
+| id | dojo_id | first_name | last_name | created_at              | updated_at              |
++----+---------+------------+-----------+-------------------------+-------------------------+
+| 8  | 4       | Bob        | Slob      | 2017-04-06 20:55:54 UTC | 2017-04-06 20:55:54 UTC |
++----+---------+------------+-----------+-------------------------+-------------------------+
+1 row in set
+2.3.1 :046 > Ninja.create(dojo:Dojo.find(4), first_name:"Kelly", last_name:"Belly")
+  Dojo Load (2.9ms)  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 4]]
+   (0.2ms)  begin transaction
+  SQL (6.2ms)  INSERT INTO "ninjas" ("dojo_id", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["dojo_id", 4], ["first_name", "Kelly"], ["last_name", "Belly"], ["created_at", "2017-04-06 20:56:52.307884"], ["updated_at", "2017-04-06 20:56:52.307884"]]
+   (10.5ms)  commit transaction
++----+---------+------------+-----------+-------------------------+-------------------------+
+| id | dojo_id | first_name | last_name | created_at              | updated_at              |
++----+---------+------------+-----------+-------------------------+-------------------------+
+| 9  | 4       | Kelly      | Belly     | 2017-04-06 20:56:52 UTC | 2017-04-06 20:56:52 UTC |
++----+---------+------------+-----------+-------------------------+-------------------------+
+1 row in set
+2.3.1 :047 > Ninja.create(dojo:Dojo.find(4), first_name:"Large", last_name:"Marge")
+  Dojo Load (2.2ms)  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 4]]
+   (0.1ms)  begin transaction
+  SQL (5.0ms)  INSERT INTO "ninjas" ("dojo_id", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["dojo_id", 4], ["first_name", "Large"], ["last_name", "Marge"], ["created_at", "2017-04-06 20:57:12.819153"], ["updated_at", "2017-04-06 20:57:12.819153"]]
+   (10.3ms)  commit transaction
++----+---------+------------+-----------+-------------------------+-------------------------+
+| id | dojo_id | first_name | last_name | created_at              | updated_at              |
++----+---------+------------+-----------+-------------------------+-------------------------+
+| 10 | 4       | Large      | Marge     | 2017-04-06 20:57:12 UTC | 2017-04-06 20:57:12 UTC |
++----+---------+------------+-----------+-------------------------+-------------------------+
+1 row in set
+2.3.1 :048 > Ninja.create(dojo:Dojo.find(5), first_name:"Blue", last_name:"Lou")
+  Dojo Load (3.0ms)  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 5]]
+   (0.1ms)  begin transaction
+  SQL (7.6ms)  INSERT INTO "ninjas" ("dojo_id", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["dojo_id", 5], ["first_name", "Blue"], ["last_name", "Lou"], ["created_at", "2017-04-06 20:57:53.976467"], ["updated_at", "2017-04-06 20:57:53.976467"]]
+   (11.0ms)  commit transaction
++----+---------+------------+-----------+-------------------------+-------------------------+
+| id | dojo_id | first_name | last_name | created_at              | updated_at              |
++----+---------+------------+-----------+-------------------------+-------------------------+
+| 11 | 5       | Blue       | Lou       | 2017-04-06 20:57:53 UTC | 2017-04-06 20:57:53 UTC |
++----+---------+------------+-----------+-------------------------+-------------------------+
+1 row in set
+2.3.1 :049 > Ninja.create(dojo:Dojo.find(5), first_name:"Tall", last_name:"Paul")
+  Dojo Load (2.2ms)  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 5]]
+   (0.1ms)  begin transaction
+  SQL (5.1ms)  INSERT INTO "ninjas" ("dojo_id", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["dojo_id", 5], ["first_name", "Tall"], ["last_name", "Paul"], ["created_at", "2017-04-06 20:58:15.852019"], ["updated_at", "2017-04-06 20:58:15.852019"]]
+   (10.7ms)  commit transaction
++----+---------+------------+-----------+-------------------------+-------------------------+
+| id | dojo_id | first_name | last_name | created_at              | updated_at              |
++----+---------+------------+-----------+-------------------------+-------------------------+
+| 12 | 5       | Tall       | Paul      | 2017-04-06 20:58:15 UTC | 2017-04-06 20:58:15 UTC |
++----+---------+------------+-----------+-------------------------+-------------------------+
+1 row in set
+2.3.1 :050 > Ninja.create(dojo:Dojo.find(5), first_name:"Kevin", last_name:"Heaven")
+  Dojo Load (2.3ms)  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 5]]
+   (0.2ms)  begin transaction
+  SQL (5.0ms)  INSERT INTO "ninjas" ("dojo_id", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["dojo_id", 5], ["first_name", "Kevin"], ["last_name", "Heaven"], ["created_at", "2017-04-06 20:58:40.022505"], ["updated_at", "2017-04-06 20:58:40.022505"]]
+   (9.6ms)  commit transaction
++----+---------+------------+-----------+-------------------------+-------------------------+
+| id | dojo_id | first_name | last_name | created_at              | updated_at              |
++----+---------+------------+-----------+-------------------------+-------------------------+
+| 13 | 5       | Kevin      | Heaven    | 2017-04-06 20:58:40 UTC | 2017-04-06 20:58:40 UTC |
++----+---------+------------+-----------+-------------------------+-------------------------+
+1 row in set
+2.3.1 :051 > Ninja.create(dojo:Dojo.find(5), first_name:"Eduardo", last_name:"Embargo")
+  Dojo Load (3.3ms)  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 5]]
+   (0.1ms)  begin transaction
+  SQL (6.8ms)  INSERT INTO "ninjas" ("dojo_id", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["dojo_id", 5], ["first_name", "Eduardo"], ["last_name", "Embargo"], ["created_at", "2017-04-06 20:59:10.027154"], ["updated_at", "2017-04-06 20:59:10.027154"]]
+   (10.4ms)  commit transaction
++----+---------+------------+-----------+-------------------------+-------------------------+
+| id | dojo_id | first_name | last_name | created_at              | updated_at              |
++----+---------+------------+-----------+-------------------------+-------------------------+
+| 14 | 5       | Eduardo    | Embargo   | 2017-04-06 20:59:10 UTC | 2017-04-06 20:59:10 UTC |
++----+---------+------------+-----------+-------------------------+-------------------------+
+1 row in set
+2.3.1 :052 > Ninja.create(dojo:Dojo.find(5), first_name:"John", last_name:"Yawn")
+  Dojo Load (2.5ms)  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 5]]
+   (0.1ms)  begin transaction
+  SQL (5.1ms)  INSERT INTO "ninjas" ("dojo_id", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["dojo_id", 5], ["first_name", "John"], ["last_name", "Yawn"], ["created_at", "2017-04-06 20:59:36.850989"], ["updated_at", "2017-04-06 20:59:36.850989"]]
+   (10.1ms)  commit transaction
++----+---------+------------+-----------+-------------------------+-------------------------+
+| id | dojo_id | first_name | last_name | created_at              | updated_at              |
++----+---------+------------+-----------+-------------------------+-------------------------+
+| 15 | 5       | John       | Yawn      | 2017-04-06 20:59:36 UTC | 2017-04-06 20:59:36 UTC |
++----+---------+------------+-----------+-------------------------+-------------------------+
+1 row in set
+2.3.1 :053 > Ninja.create(dojo:Dojo.find(6), first_name:"Van", last_name:"Fan")
+  Dojo Load (3.3ms)  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 6]]
+   (0.1ms)  begin transaction
+  SQL (5.6ms)  INSERT INTO "ninjas" ("dojo_id", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["dojo_id", 6], ["first_name", "Van"], ["last_name", "Fan"], ["created_at", "2017-04-06 21:00:08.399153"], ["updated_at", "2017-04-06 21:00:08.399153"]]
+   (11.5ms)  commit transaction
++----+---------+------------+-----------+-------------------------+-------------------------+
+| id | dojo_id | first_name | last_name | created_at              | updated_at              |
++----+---------+------------+-----------+-------------------------+-------------------------+
+| 16 | 6       | Van        | Fan       | 2017-04-06 21:00:08 UTC | 2017-04-06 21:00:08 UTC |
++----+---------+------------+-----------+-------------------------+-------------------------+
+1 row in set
+2.3.1 :054 > Ninja.create(dojo:Dojo.find(6), first_name:"Ericka", last_name:"Hysterica")
+  Dojo Load (3.3ms)  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 6]]
+   (0.1ms)  begin transaction
+  SQL (8.9ms)  INSERT INTO "ninjas" ("dojo_id", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["dojo_id", 6], ["first_name", "Ericka"], ["last_name", "Hysterica"], ["created_at", "2017-04-06 21:00:28.945026"], ["updated_at", "2017-04-06 21:00:28.945026"]]
+   (12.3ms)  commit transaction
++----+---------+------------+-----------+-------------------------+-------------------------+
+| id | dojo_id | first_name | last_name | created_at              | updated_at              |
++----+---------+------------+-----------+-------------------------+-------------------------+
+| 17 | 6       | Ericka     | Hysterica | 2017-04-06 21:00:28 UTC | 2017-04-06 21:00:28 UTC |
++----+---------+------------+-----------+-------------------------+-------------------------+
+1 row in set
+2.3.1 :055 > Ninja.create(dojo:Dojo.find(6), first_name:"Stefan", last_name:"Stepon")
+  Dojo Load (3.1ms)  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 6]]
+   (0.1ms)  begin transaction
+  SQL (5.7ms)  INSERT INTO "ninjas" ("dojo_id", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["dojo_id", 6], ["first_name", "Stefan"], ["last_name", "Stepon"], ["created_at", "2017-04-06 21:01:03.538024"], ["updated_at", "2017-04-06 21:01:03.538024"]]
+   (11.4ms)  commit transaction
++----+---------+------------+-----------+-------------------------+-------------------------+
+| id | dojo_id | first_name | last_name | created_at              | updated_at              |
++----+---------+------------+-----------+-------------------------+-------------------------+
+| 18 | 6       | Stefan     | Stepon    | 2017-04-06 21:01:03 UTC | 2017-04-06 21:01:03 UTC |
++----+---------+------------+-----------+-------------------------+-------------------------+
+1 row in set
+2.3.1 :056 > Dojo.ninjas.all
+NoMethodError: undefined method `ninjas' for #<Class:0x00000004919ac0>
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/dynamic_matchers.rb:26:in `method_missing'
+	from (irb):56
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/console.rb:110:in `start'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/console.rb:9:in `start'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `block in require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+	from /vagrant/Rails/dojo_ninjas/bin/rails:9:in `<top (required)>'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `block in load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/commands/rails.rb:6:in `call'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/command_wrapper.rb:38:in `call'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:191:in `block in serve'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:161:in `fork'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:161:in `serve'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:131:in `block in run'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:125:in `loop'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:125:in `run'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application/boot.rb:19:in `<top (required)>'
+	from /home/vagrant/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /home/vagrant/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from -e:1:in `<main>'
+2.3.1 :057 > Ninja.all.dojo
+NoMethodError:   Ninja Load (2.9ms)  SELECT "ninjas".* FROM "ninjas"
+undefined method `dojo' for #<Ninja::ActiveRecord_Relation:0x00000004074f50>
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/relation/delegation.rb:136:in `method_missing'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/relation/delegation.rb:99:in `method_missing'
+	from (irb):57
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/console.rb:110:in `start'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/console.rb:9:in `start'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `block in require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+	from /vagrant/Rails/dojo_ninjas/bin/rails:9:in `<top (required)>'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `block in load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/commands/rails.rb:6:in `call'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/command_wrapper.rb:38:in `call'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:191:in `block in serve'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:161:in `fork'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:161:in `serve'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:131:in `block in run'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:125:in `loop'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:125:in `run'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application/boot.rb:19:in `<top (required)>'
+	from /home/vagrant/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /home/vagrant/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from -e:1:in `<main>'
+2.3.1 :058 > Ninja.all.dojos
+NoMethodError:   Ninja Load (3.1ms)  SELECT "ninjas".* FROM "ninjas"
+undefined method `dojos' for #<Ninja::ActiveRecord_Relation:0x00000003ffe210>
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/relation/delegation.rb:136:in `method_missing'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/relation/delegation.rb:99:in `method_missing'
+	from (irb):58
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/console.rb:110:in `start'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/console.rb:9:in `start'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `block in require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+	from /vagrant/Rails/dojo_ninjas/bin/rails:9:in `<top (required)>'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `block in load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/commands/rails.rb:6:in `call'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/command_wrapper.rb:38:in `call'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:191:in `block in serve'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:161:in `fork'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:161:in `serve'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:131:in `block in run'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:125:in `loop'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:125:in `run'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application/boot.rb:19:in `<top (required)>'
+	from /home/vagrant/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /home/vagrant/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from -e:1:in `<main>'
+2.3.1 :059 > Dojo.ninjs.all
+NoMethodError: undefined method `ninjs' for #<Class:0x00000004919ac0>
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/dynamic_matchers.rb:26:in `method_missing'
+	from (irb):59
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/console.rb:110:in `start'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/console.rb:9:in `start'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `block in require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+	from /vagrant/Rails/dojo_ninjas/bin/rails:9:in `<top (required)>'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `block in load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/commands/rails.rb:6:in `call'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/command_wrapper.rb:38:in `call'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:191:in `block in serve'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:161:in `fork'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:161:in `serve'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:131:in `block in run'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:125:in `loop'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application.rb:125:in `run'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/spring-2.0.1/lib/spring/application/boot.rb:19:in `<top (required)>'
+	from /home/vagrant/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /home/vagrant/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from -e:1:in `<main>'
+2.3.1 :060 > Dojo.last.ninjas
+  Dojo Load (2.6ms)  SELECT  "dojos".* FROM "dojos"  ORDER BY "dojos"."id" DESC LIMIT 1
+  Ninja Load (2.3ms)  SELECT "ninjas".* FROM "ninjas" WHERE "ninjas"."dojo_id" = ?  [["dojo_id", 8]]
+ => #<ActiveRecord::Associations::CollectionProxy []> 
+2.3.1 :061 > Dojo.find(1).ninjas
+  Dojo Load (2.4ms)  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 1]]
+ActiveRecord::RecordNotFound: Couldn't find Dojo with 'id'=1
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/core.rb:155:in `find'
+	from (irb):61
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/console.rb:110:in `start'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/console.rb:9:in `start'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `block in require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+	from /vagrant/Rails/dojo_ninjas/bin/rails:9:in `<top (required)>'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `block in load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+	from /home/vagrant/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /home/vagrant/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from -e:1:in `<main>'
+2.3.1 :062 > Ninja.where(dojo: Dojo.find(1))
+  Dojo Load (2.9ms)  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 1]]
+ActiveRecord::RecordNotFound: Couldn't find Dojo with 'id'=1
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/core.rb:155:in `find'
+	from (irb):62
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/console.rb:110:in `start'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/console.rb:9:in `start'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `block in require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+	from /vagrant/Rails/dojo_ninjas/bin/rails:9:in `<top (required)>'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `block in load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+	from /home/vagrant/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /home/vagrant/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from -e:1:in `<main>'
+2.3.1 :063 > Ninja.where(dojo: Dojo.find(4))
+  Dojo Load (2.7ms)  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 4]]
+  Ninja Load (2.0ms)  SELECT "ninjas".* FROM "ninjas" WHERE "ninjas"."dojo_id" = 4
++----+---------+------------+-----------+-------------------------+-------------------------+
+| id | dojo_id | first_name | last_name | created_at              | updated_at              |
++----+---------+------------+-----------+-------------------------+-------------------------+
+| 7  | 4       | Bob        | Slob      | 2017-04-06 20:54:33 UTC | 2017-04-06 20:54:33 UTC |
+| 8  | 4       | Bob        | Slob      | 2017-04-06 20:55:54 UTC | 2017-04-06 20:55:54 UTC |
+| 9  | 4       | Kelly      | Belly     | 2017-04-06 20:56:52 UTC | 2017-04-06 20:56:52 UTC |
+| 10 | 4       | Large      | Marge     | 2017-04-06 20:57:12 UTC | 2017-04-06 20:57:12 UTC |
++----+---------+------------+-----------+-------------------------+-------------------------+
+4 rows in set
+2.3.1 :064 > Ninja.where(dojo: Dojo.find(4)).select(:first_name).order(created_at: :desc)
+  Dojo Load (2.2ms)  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 4]]
+  Ninja Load (2.5ms)  SELECT "ninjas"."first_name" FROM "ninjas" WHERE "ninjas"."dojo_id" = 4  ORDER BY "ninjas"."created_at" DESC
++----+------------+
+| id | first_name |
++----+------------+
+|    | Large      |
+|    | Kelly      |
+|    | Bob        |
+|    | Bob        |
++----+------------+
+4 rows in set
+2.3.1 :065 > reload!
+Reloading...
+ => true 
+2.3.1 :066 > Dojo.find(2).destroy
+  Dojo Load (1.4ms)  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 2]]
+ActiveRecord::RecordNotFound: Couldn't find Dojo with 'id'=2
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/core.rb:155:in `find'
+	from (irb):66
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/console.rb:110:in `start'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/console.rb:9:in `start'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `block in require'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+	from /vagrant/Rails/dojo_ninjas/bin/rails:9:in `<top (required)>'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `block in load'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+	from /home/vagrant/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /home/vagrant/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from -e:1:in `<main>'
+2.3.1 :067 > Dojo.find(4).destroy
+  Dojo Load (2.7ms)  SELECT  "dojos".* FROM "dojos" WHERE "dojos"."id" = ? LIMIT 1  [["id", 4]]
+   (0.1ms)  begin transaction
+  Ninja Load (0.6ms)  SELECT "ninjas".* FROM "ninjas" WHERE "ninjas"."dojo_id" = ?  [["dojo_id", 4]]
+  SQL (2.0ms)  DELETE FROM "ninjas" WHERE "ninjas"."id" = ?  [["id", 7]]
+  SQL (0.1ms)  DELETE FROM "ninjas" WHERE "ninjas"."id" = ?  [["id", 8]]
+  SQL (0.1ms)  DELETE FROM "ninjas" WHERE "ninjas"."id" = ?  [["id", 9]]
+  SQL (0.0ms)  DELETE FROM "ninjas" WHERE "ninjas"."id" = ?  [["id", 10]]
+  SQL (0.6ms)  DELETE FROM "dojos" WHERE "dojos"."id" = ?  [["id", 4]]
+   (3.8ms)  commit transaction
++----+-------------+--------+---------+-------+-------------------------+-------------------------+
+| id | name        | string | city    | state | created_at              | updated_at              |
++----+-------------+--------+---------+-------+-------------------------+-------------------------+
+| 4  | BurbankDojo |        | Burbank | CA    | 2017-04-06 19:51:41 UTC | 2017-04-06 19:51:41 UTC |
++----+-------------+--------+---------+-------+-------------------------+-------------------------+
+1 row in set
+2.3.1 :068 > 
